@@ -5,8 +5,8 @@ import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 
 
 const EVENT_INFO = {
-  title: 'Lễ tốt nghiệp - Lê Hồng Quang | TDTU',
-  description: 'Lễ tốt nghiệp của Lê Hồng Quang - Trường Đại học Tôn Đức Thắng. Trân trọng kính mời Quý khách đến tham dự.',
+  title: 'Lễ tốt nghiệp - Giản Hoàng Huy | TDTU',
+  description: 'Lễ tốt nghiệp của Giản Hoàng Huy - Trường Đại học Tôn Đức Thắng. Trân trọng kính mời Quý khách đến tham dự.',
   location: 'Trường Đại học Tôn Đức Thắng, 19 Nguyễn Hữu Thọ, Tân Phong, Quận 7, TP.HCM',
   startDate: '20261017T100000',
   endDate: '20261017T120000',
@@ -82,7 +82,7 @@ export function EventDetails() {
           <div className="event-date-copy">
             <h2 className="section-heading text-2xl md:text-3xl mb-4">{t('Thời gian & địa điểm')}</h2>
             <p className="font-serif text-xl md:text-2xl text-heading">{t('Ngày 17 tháng 10 năm 2026')}</p>
-            <p className="event-meeting-time font-serif">{t('Thứ Bảy')} <span>10:00–12:00</span></p>
+            <p className="event-meeting-time font-serif">{t('Thứ Bảy')} <span>15:30–17:00</span></p>
             <p className="font-body text-sm mb-6">{t('Sảnh chính tòa A')}</p>
 
         {/* Add to Calendar */}

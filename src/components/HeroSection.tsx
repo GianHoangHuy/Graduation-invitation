@@ -6,9 +6,17 @@ import { MapPin } from 'lucide-react'
 export function HeroSection() {
   const { t } = usePreferences()
   const [searchParams] = useSearchParams()
-  const guestName = (searchParams.get('to') || searchParams.get('guest') || '').replace(/[+_]/g, ' ').trim()
+
+  const rawParam = searchParams.get('name') || searchParams.get('to') || searchParams.get('guest') || ''
+  let guestName = ''
+  try {
+    guestName = decodeURIComponent(rawParam).replace(/[+_]/g, ' ').trim()
+  } catch {
+    guestName = rawParam.replace(/[+_]/g, ' ').trim()
+  }
+
   const inviteId = searchParams.get('invite') || ''
-  const displayName = guests[inviteId] || guestName || t('Bạn')
+  const displayName = (inviteId && guests[inviteId]) || guestName || t('Bạn')
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({
@@ -31,13 +39,22 @@ export function HeroSection() {
         </p>
         <div className="divider-gold letter-divider" aria-hidden="true" />
 
-        <h1 className="section-title letter-title" style={{ color: '#8a713c' }}>{t('Lễ tốt nghiệp của')}</h1>
-        <p className="handwritten letter-graduate">Lê Hồng Quang</p>
+        <h1 className="section-title letter-title" style={{ color: '#8E7134' }}>{t('Lễ tốt nghiệp của')}</h1>
+        <p className="handwritten letter-graduate">Giản Hoàng Huy</p>
         <p className="font-body letter-degree">{t('Cử nhân Khoa học máy tính')}</p>
-        <p className="font-body letter-faculty">{t('Khoa Công nghệ Thông tin · Trường Đại học Tôn Đức Thắng')}</p>
+        <p className="font-body letter-faculty">{t('Trường Đại học Tôn Đức Thắng')}</p>
 
-        <p className="letter-date font-body">{t('17 tháng 10 năm 2026 · 10:00–12:00')}</p>
-        <button onClick={() => scrollTo('location')} className="btn-jade inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm">
+        <p className="letter-date font-body">{t('17 tháng 10 năm 2026 · 15:30–17:00')}</p>
+
+        {/* Dòng chữ cố định "cục dàng" */}
+        <p className="font-body text-sm italic max-w-md mx-auto mb-6 leading-relaxed text-[#163E66]">
+          "Huy Giản rất mong có sự hiện diện của Cục dàng để cùng lưu giữ những khoảnh khắc đáng nhớ trong ngày trọng đại này."
+        </p>
+
+        <button 
+          onClick={() => scrollTo('location')} 
+          className="btn-jade inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm transition-transform active:scale-95"
+        >
           <MapPin size={16} aria-hidden="true" />
           {t('Xem đường đi')}
         </button>

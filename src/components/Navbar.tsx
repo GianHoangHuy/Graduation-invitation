@@ -34,7 +34,7 @@ export function Navbar({ isPlaying, onAudioToggle }: NavbarProps) {
           <span className="nav-monogram" aria-hidden="true">Q</span>
           <div>
             <div className="font-serif text-sm font-semibold tracking-normal" style={{ color: 'var(--color-jade-hero)'}}>
-              LÊ HỒNG QUANG
+              GIẢN HOÀNG HUY
             </div>
             <div className="font-body text-[0.6rem] tracking-[0.2em] uppercase" style={{ color: 'var(--color-sage)'}}>
               {t("Tốt nghiệp 2026")}
@@ -106,9 +106,9 @@ export function Navbar({ isPlaying, onAudioToggle }: NavbarProps) {
       {/* ── Mobile Top Bar ── */}
       <div className="mobile-header glass-ivory fixed top-0 left-0 right-0 z-50 flex lg:hidden items-center justify-between px-4 h-14 shadow-sm">
         <div className="flex items-center gap-2 select-none">
-          <span className="nav-monogram" aria-hidden="true">Q</span>
+          <span className="nav-monogram" aria-hidden="true">Huy Giản</span>
           <span className="font-serif text-xs sm:text-sm font-semibold tracking-normal" style={{ color: 'var(--color-jade-hero)'}}>
-            LÊ HỒNG QUANG
+            GIẢN HOÀNG HUY
           </span>
         </div>
         <div className="flex items-center gap-2">

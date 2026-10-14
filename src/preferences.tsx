@@ -21,8 +21,8 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.lang = language
     document.title = language === 'en'
-      ? 'Graduation – Lê Hồng Quang | TDTU Class of 2026'
-      : 'Lễ tốt nghiệp – Lê Hồng Quang | TDTU Class of 2026'
+      ? 'Graduation – Giản Hoàng Huy | TDTU Class of 2026'
+      : 'Lễ tốt nghiệp – Giản Hoàng Huy | TDTU Class of 2026'
     try { localStorage.setItem('invitation-language', language) } catch { /* Storage may be disabled. */ }
   }, [language])
   const t = (text: string) => language === 'en' ? translations[text] ?? text : text

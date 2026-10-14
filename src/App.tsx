@@ -1,6 +1,5 @@
 import { MotionConfig } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
-import { JadeOpening } from './components/JadeOpening'
 import { Navbar } from './components/Navbar'
 import { HeroSection } from './components/HeroSection'
 import { EventDetails } from './components/EventDetails'
@@ -11,7 +10,7 @@ import { useSoundCloudPlayer } from './hooks/useSoundCloudPlayer'
 import { SoundCloudMusic } from './components/SoundCloudMusic'
 
 export default function App() {
-  const [opened, setOpened] = useState(false)
+  const [opened, setOpened] = useState(true)
   const invitationRef = useRef<HTMLElement>(null)
   useEffect(() => {
     if (opened) {
@@ -37,9 +36,7 @@ export default function App() {
           <Footer />
           <FloatingContactWidget />
         </div>
-      ) : (
-        <JadeOpening onOpen={() => setOpened(true)} />
-      )}
+) : null}
     </MotionConfig>
   )
 }

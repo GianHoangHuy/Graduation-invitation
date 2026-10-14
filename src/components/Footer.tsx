@@ -8,13 +8,13 @@ export function Footer() {
       <div className="relative z-10 max-w-2xl mx-auto px-6 text-center">
         <div className="footer-flourish" aria-hidden="true" />
         <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-5" style={{ color: 'var(--color-heading)'}}>
-          {t('Mong được gặp bạn')}
+          {t('Hẹn gặp lại bạn')}
         </h2>
         <p className="font-body text-sm md:text-base leading-relaxed" style={{ color: 'var(--color-body)'}}>
           {t('Sự góp mặt của bạn có ý nghĩa rất lớn với tôi, làm cho ngày tốt nghiệp thêm trọn vẹn và trở thành một kỷ niệm đẹp.')}
         </p>
         <div className="divider-gold max-w-48 mx-auto my-7"/>
-        <p className="handwritten text-3xl" style={{ color: 'var(--color-jade-deep)'}}>Lê Hồng Quang</p>
+        <p className="handwritten text-3xl" style={{ color: 'var(--color-jade-deep)'}}>Giản Hoàng Huy</p>
       </div>
     </footer>
   )
